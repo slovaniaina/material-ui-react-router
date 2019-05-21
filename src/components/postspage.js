@@ -2,21 +2,22 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import TypoGraphy from '@material-ui/core/Typography';
-import NavBar from './components/navbar'
-import Posts from './components/posts'
-class App extends Component {
+import NavBar from './navbar'
+import Posts from './posts'
+class PostsPage extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div>
         <AppBar color="primary" position="static">
+          {/* <h1>My header</h1> */}
           <Toolbar>
             <TypoGraphy variant="title" color="inherit">My Header</TypoGraphy>
             <NavBar />
           </Toolbar>
         </AppBar>
-        <h1>This is the homepage</h1>
-      </React.Fragment>
+        <Posts />
+      </div>
     );
   }
 }
-export default App;
+export default PostsPage;
