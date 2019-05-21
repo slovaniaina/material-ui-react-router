@@ -5,7 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import TypoGraphy from '@material-ui/core/Typography';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import { Home, Book, AccountBox } from '@material-ui/icons';
+import { Home, Book, AccountBox, AccountCircle } from '@material-ui/icons';
 
 
 function NavBar(props) {
@@ -30,6 +30,13 @@ function NavBar(props) {
                     </TypoGraphy>
                 </ListItemText>
 
+                <ListItemText inset>
+                    <TypoGraphy color="inherit" variant="title">
+                        <Link to ="/users">
+                            Users <AccountCircle />
+                        </Link>
+                    </TypoGraphy>
+                </ListItemText>
 
                 <ListItemText inset>
                     <TypoGraphy color="inherit" variant="title">

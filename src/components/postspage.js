@@ -7,16 +7,15 @@ import Posts from './posts'
 class PostsPage extends Component {
   render() {
     return (
-      <div>
+    <div>
         <AppBar color="primary" position="static">
-          {/* <h1>My header</h1> */}
           <Toolbar>
             <TypoGraphy variant="title" color="inherit">My Header</TypoGraphy>
             <NavBar />
           </Toolbar>
         </AppBar>
         <Posts />
-      </div>
+    </div>
     );
   }
 }
