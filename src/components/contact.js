@@ -3,8 +3,14 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import TypoGraphy from '@material-ui/core/Typography';
 import NavBar from './navbar';
+import { FormControl, InputLabel, Input, Button, TextField } from '@material-ui/core';
 
 class Contact extends React.Component {
+    onSubmit = () => {
+        console.log(this.props);
+        this.props.history.push('/');
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -15,8 +21,36 @@ class Contact extends React.Component {
                         <NavBar />
                     </Toolbar>
                 </AppBar>
-            
-                <h1>this is the Contact page</h1>
+                <div
+                    style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: 20,
+                    padding: 20
+                    }}
+                >
+                    <form style={{ width: "50%" }}>
+                        <h1>Contact Form</h1>
+                        <FormControl margin="normal" fullWidth>
+                            <InputLabel htmlFor="name">Name</InputLabel>
+                            <Input id="name" type="text" />
+                        </FormControl>
+
+                        <FormControl margin="normal" fullWidth>
+                            <InputLabel htmlFor="email">Email</InputLabel>
+                            <Input id="email" type="email" />
+                        </FormControl>
+
+                        <FormControl margin="normal" fullWidth>
+                            <InputLabel htmlFor="email">Message</InputLabel>
+                            <Input id="email" multiline rows={10} />
+                        </FormControl>
+                        <Button variant="contained" color="primary" size="medium" onClick = {this.onSubmit}>
+                            Send
+                        </Button>
+                    </form>
+                </div>
+                
             </React.Fragment>
         );
       }

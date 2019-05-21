@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -15,34 +15,34 @@ function NavBar(props) {
             <ListItem component="div">
                 <ListItemText inset>
                     <TypoGraphy color="inherit" variant="title">
-                        <Link to="/">
+                        <NavLink exact activeClassName="active" to="/">
                             Home <Home />
-                        </Link>  
+                        </NavLink>  
                     </TypoGraphy>
                 </ListItemText>
 
 
                 <ListItemText inset>
                     <TypoGraphy color="inherit" variant="title">
-                        <Link to ="/posts">
+                        <NavLink activeClassName="active" to ="/posts">
                             Posts <Book />
-                        </Link>
+                        </NavLink>
                     </TypoGraphy>
                 </ListItemText>
 
                 <ListItemText inset>
                     <TypoGraphy color="inherit" variant="title">
-                        <Link to ="/users">
+                        <NavLink activeClassName="active" to ="/users">
                             Users <AccountCircle />
-                        </Link>
+                        </NavLink>
                     </TypoGraphy>
                 </ListItemText>
 
                 <ListItemText inset>
                     <TypoGraphy color="inherit" variant="title">
-                        <Link to ="/contact">
+                        <NavLink activeClassName="active" to ="/contact">
                             Contact <AccountBox />
-                        </Link>
+                        </NavLink>
                     </TypoGraphy>
                 </ListItemText>
             </ListItem >
