@@ -7,6 +7,7 @@ import Users from './components/users';
 import Contact from './components/contact';
 import PostsPage from './components/postspage';
 import Notfound from './components/notfound';
+import DummyListPage from './components/dummylists'
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -17,6 +18,7 @@ const routing = (
             <Route path="/users" component={Users} />
             <Route path="/contact" component={Contact} />
             <Route path="/posts" component={PostsPage} />
+            <Route path="/dummy" component={DummyListPage} />
             <Route component= {Notfound} />
         </Switch>
       </div>

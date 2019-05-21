@@ -45,6 +45,14 @@ function NavBar(props) {
                         </NavLink>
                     </TypoGraphy>
                 </ListItemText>
+
+                <ListItemText inset>
+                    <TypoGraphy color="inherit" variant="title">
+                        <NavLink activeClassName="active" to ="/dummy">
+                            Dummy Test <AccountBox />
+                        </NavLink>
+                    </TypoGraphy>
+                </ListItemText>
             </ListItem >
 
         </List>
